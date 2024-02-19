@@ -59,8 +59,10 @@ class FlightWithPassengerTest {
 
   @Test
   public void testFlightsDistances() {
-    when(distanceManager.getPassengerPoints())
-        .thenReturn(passengersPointsMap);
+    when(distanceManager.getPassengerDistances())
+        .thenReturn(passengerDistances);
+
+    distanceManager.calculateGivenPoints();
 
     assertEquals(210, distanceManager.getPassengerPoints()
         .get(new Passenger("940207-6459423", "Susan Todd", "GB")).longValue());
