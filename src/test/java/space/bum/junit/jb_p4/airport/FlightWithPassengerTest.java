@@ -18,7 +18,7 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
+import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
@@ -39,22 +39,22 @@ class FlightWithPassengerTest {
   @FlightNumber(number = "AB5422")
   Flight flight;
 
-  @Mock
+  @Spy
   DistanceManager distanceManager;
 
   @Rule
   public MockitoRule mockitoRule = MockitoJUnit.rule();
 
-  private static Map<Passenger, Integer> passengersPointsMap = new HashMap<>();
+  private static Map<Passenger, Integer> passengerDistances = new HashMap<>();
 
   @BeforeClass
   public static void setUp() {
-    passengersPointsMap.put(new Passenger("940207-6459423", "Susan Todd", "GB"),
-        210);
-    passengersPointsMap
-        .put(new Passenger("860602-6749821", "Harry Christensen", "GB"), 420);
-    passengersPointsMap.put(new Passenger("850205-3917188", "정성민", "KR"),
-        630);
+    passengerDistances.put(new Passenger("940207-6459423", "Susan Todd", "GB"),
+        2100);
+    passengerDistances
+        .put(new Passenger("860602-6749821", "Harry Christensen", "GB"), 4200);
+    passengerDistances.put(new Passenger("850205-3917188", "정성민", "KR"),
+        6300);
   }
 
   @Test
