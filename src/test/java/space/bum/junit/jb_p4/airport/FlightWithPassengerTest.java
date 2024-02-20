@@ -36,7 +36,7 @@ public class FlightWithPassengerTest {
   }
 
   @Inject
-  @FlightNumber(number = "AB5422")
+  @FlightNumber(number = "AA1234")
   Flight flight;
 
   @Spy
