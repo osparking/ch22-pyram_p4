@@ -26,7 +26,7 @@ import space.bum.junit.jb_p4.airport.annotation.FlightNumber;
 import space.bum.junit.jb_p4.airport.producer.FlightProducer;
 
 @RunWith(Arquillian.class)
-class FlightWithPassengerTest {
+public class FlightWithPassengerTest {
 
   @Deployment
   public static JavaArchive createDeployment() {
